@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --background: #f4f2ed;
+  --background: #F1E8D8;
   --text: #111111;
-  --line: #c8c6c0;
+  --line: rgba(22, 22, 22, 0.18);
 
   --python: #d98b9d;
   --powerbi: #8d76c9;
@@ -51,6 +51,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+}
+.interaction-instruction {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: rgba(22, 22, 22, 0.45);
+  text-transform: uppercase;
 }
 
 .about-status {
@@ -720,6 +728,9 @@ body {
   .about-top {
     font-size: 10px;
   }
+  .interaction-instruction {
+  display: none;
+}
 
   .about-status {
     display: none;
@@ -830,4 +841,275 @@ body {
 
   margin-top: 45px;
 }
+.projects-heatmap {
+  grid-template-columns: 1fr;
+}
+
+.project-cell {
+  min-height: auto;
+  padding: 22px;
+}
+
+.project-cell:hover {
+  min-height: auto;
+  transform: none;
+}
+
+.project-expand {
+  max-height: 0;
+
+  opacity: 0;
+  overflow: hidden;
+
+  transform: translateY(0);
+
+  margin-top: 0;
+
+  transition:
+    max-height 0.5s ease,
+    opacity 0.3s ease,
+    margin-top 0.3s ease;
+}
+
+.project-cell.active .project-expand {
+  max-height: 900px;
+
+  opacity: 1;
+
+  margin-top: 24px;
+
+  pointer-events: auto;
+}
+
+.project-cell h3 {
+  font-size: 20px;
+}
+}
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-section {
+  padding-top: 100px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.section-number,
+.section-title {
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.section-line {
+  height: 1px;
+  flex: 1;
+  background: rgba(22, 22, 22, 0.18);
+}
+
+.projects-intro {
+  max-width: 520px;
+  margin-bottom: 55px;
+}
+
+.projects-intro p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* HEATMAP */
+
+.projects-heatmap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+
+/* PROJECT CELL */
+
+.project-cell {
+  position: relative;
+  min-height: 180px;
+  padding: 24px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition:
+    min-height 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.project-cell:hover {
+  min-height: 460px;
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/* TOP */
+
+.project-cell-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 28px;
+}
+
+.project-category,
+.project-number {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+}
+
+.project-number {
+  opacity: 0.55;
+}
+
+
+/* TITLE */
+
+.project-cell h3 {
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 500;
+
+  max-width: 250px;
+
+  margin: 0;
+}
+
+
+/* HIDDEN CONTENT */
+
+.project-expand {
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.45s ease;
+
+  pointer-events: none;
+
+  margin-top: 30px;
+}
+
+.project-cell:hover .project-expand {
+  opacity: 1;
+  transform: translateY(0);
+
+  pointer-events: auto;
+}
+
+
+/* DESCRIPTION */
+
+.project-description {
+  font-size: 14px;
+  line-height: 1.6;
+
+  margin-bottom: 24px;
+}
+
+
+/* DETAILS */
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.project-details span {
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+
+  opacity: 0.55;
+}
+
+.project-details strong {
+  font-size: 12px;
+  line-height: 1.5;
+
+  font-weight: 500;
+}
+
+
+/* LINK */
+
+.project-link {
+  display: inline-block;
+
+  margin-top: 28px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+
+  letter-spacing: 0.08em;
+
+  color: inherit;
+  text-decoration: none;
+
+  border-bottom: 1px solid currentColor;
+
+  padding-bottom: 4px;
+
+  transition:
+    letter-spacing 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.project-link:hover {
+  letter-spacing: 0.16em;
+  opacity: 0.65;
+}
+
+
+/* =========================
+   HEATMAP COLOURS
+========================= */
+
+.machine-learning {
+  background: #f4c6d7;
+}
+
+.econometrics {
+  background: #d8c5f0;
+}
+
+.python {
+  background: #c9e1f5;
+}
+
+.powerbi {
+  background: #f8e9a8;
+}
+
+.r-programming {
+  background: #f6d0aa;
+}
+
+.sql-python {
+  background: #f3b8b8;
 }

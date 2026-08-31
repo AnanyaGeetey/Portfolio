@@ -280,3 +280,21 @@ timelineNodes.forEach((node) => {
   });
 
 });
+
+const projectCells = document.querySelectorAll(".project-cell");
+
+projectCells.forEach((project) => {
+  project.addEventListener("click", () => {
+
+    if (window.innerWidth <= 700) {
+
+      projectCells.forEach((otherProject) => {
+        if (otherProject !== project) {
+          otherProject.classList.remove("active");
+        }
+      });
+
+      project.classList.toggle("active");
+    }
+  });
+});
