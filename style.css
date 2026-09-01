@@ -429,7 +429,6 @@ body {
 
 #cursor-trail {
   position: fixed;
-
   top: 0;
   left: 0;
 
@@ -440,12 +439,11 @@ body {
 
   pointer-events: none;
 
-  background: #75d85b;
+  background: #f4a6c1;
 
   box-shadow:
-    0 0 8px #75d85b,
-    0 0 18px rgba(117, 216, 91, 0.8),
-    0 0 35px rgba(117, 216, 91, 0.45);
+    0 0 5px rgba(244, 166, 193, 0.55),
+    0 0 10px rgba(244, 166, 193, 0.25);
 
   transform: translate(-50%, -50%);
 
@@ -454,8 +452,6 @@ body {
   mix-blend-mode: multiply;
 }
 
-
-/* SPARKLES */
 
 .sparkle {
   position: fixed;
@@ -467,15 +463,13 @@ body {
 
   z-index: 9998;
 
-  background: #8cff70;
+  background: #ffb6d0;
 
-  transform:
-    translate(-50%, -50%)
-    rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 
   box-shadow:
-    0 0 6px #8cff70,
-    0 0 14px rgba(140, 255, 112, 0.9);
+    0 0 4px rgba(255, 182, 208, 0.6),
+    0 0 8px rgba(255, 182, 208, 0.3);
 
   animation: sparkle-fade 0.7s ease-out forwards;
 }
