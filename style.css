@@ -884,6 +884,21 @@ body {
 .project-cell h3 {
   font-size: 20px;
 }
+.resume-section {
+  padding-top: 70px;
+}
+
+.resume-intro {
+  margin-bottom: 30px;
+}
+
+.resume-viewer-wrapper {
+  height: 520px;
+}
+
+.resume-download {
+  font-size: 10px;
+}
 }
 /* =========================
    PROJECTS
@@ -1112,4 +1127,89 @@ body {
 
 .sql-python {
   background: #f3b8b8;
+}
+
+/* =========================
+   RESUME
+========================= */
+
+.resume-section {
+  padding-top: 100px;
+}
+
+.resume-intro {
+  max-width: 500px;
+  margin-bottom: 45px;
+}
+
+.resume-intro p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* RESUME WINDOW */
+
+.resume-viewer-wrapper {
+  width: 100%;
+  max-width: 900px;
+
+  height: 700px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(22, 22, 22, 0.18);
+
+  background: #ffffff;
+}
+
+
+.resume-viewer {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+
+  display: block;
+}
+
+
+/* DOWNLOAD */
+
+.resume-actions {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 30px;
+}
+
+
+.resume-download {
+  font-family: "DM Mono", monospace;
+
+  font-size: 11px;
+
+  letter-spacing: 0.1em;
+
+  color: #161616;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #161616;
+
+  padding-bottom: 6px;
+
+  transition:
+    opacity 0.25s ease,
+    letter-spacing 0.25s ease;
+}
+
+
+.resume-download:hover {
+  opacity: 0.55;
+
+  letter-spacing: 0.16em;
 }
