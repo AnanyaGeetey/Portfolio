@@ -905,7 +905,7 @@ body {
 .section-header {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
   margin-bottom: 40px;
 }
 
