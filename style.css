@@ -835,49 +835,112 @@ body {
 
   margin-top: 45px;
 }
-.projects-heatmap {
-  grid-template-columns: 1fr;
-}
+  /* PROJECTS MOBILE */
 
-.project-cell {
-  min-height: auto;
-  padding: 22px;
-}
+  .projects-heatmap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+  }
 
-.project-cell:hover {
-  min-height: auto;
-  transform: none;
-}
+  .project-cell {
+    width: 100%;
+    min-width: 0;
+    min-height: 150px;
+    padding: 22px;
+    box-sizing: border-box;
+  }
 
-.project-expand {
-  max-height: 0;
+  .project-cell:nth-child(1),
+  .project-cell:nth-child(2),
+  .project-cell:nth-child(3),
+  .project-cell:nth-child(4),
+  .project-cell:nth-child(5),
+  .project-cell:nth-child(6),
+  .project-cell:nth-child(7),
+  .project-cell:nth-child(8) {
+    grid-column: auto;
+  }
 
-  opacity: 0;
-  overflow: hidden;
+  .project-cell:hover {
+    min-height: 150px;
+    transform: none;
+    box-shadow: none;
+  }
 
-  transform: translateY(0);
+  .project-cell h3 {
+    width: 100%;
+    max-width: none;
+    margin: 0;
 
-  margin-top: 0;
+    font-size: 22px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
 
-  transition:
-    max-height 0.5s ease,
-    opacity 0.3s ease,
-    margin-top 0.3s ease;
-}
+  .project-cell-top {
+    width: 100%;
+    margin-bottom: 22px;
+  }
 
-.project-cell.active .project-expand {
-  max-height: 900px;
+  .project-expand {
+    width: 100%;
+    max-width: none;
 
-  opacity: 1;
+    max-height: 0;
+    margin-top: 0;
 
-  margin-top: 24px;
+    opacity: 0;
+    overflow: hidden;
+    transform: none;
 
-  pointer-events: auto;
-}
+    transition:
+      max-height 0.45s ease,
+      opacity 0.3s ease,
+      margin-top 0.3s ease;
+  }
 
-.project-cell h3 {
-  font-size: 20px;
-}
+  .project-cell.active {
+    min-height: 150px;
+  }
+
+  .project-cell.active .project-expand {
+    max-height: 1000px;
+    margin-top: 25px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .project-description {
+    width: 100%;
+    max-width: none;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+  }
+
+  .project-details {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .project-details strong {
+    max-width: none;
+
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .project-link {
+    margin-top: 25px;
+    font-size: 10px;
+  }
 .resume-section {
   padding-top: 70px;
 }
