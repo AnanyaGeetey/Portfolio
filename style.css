@@ -708,255 +708,6 @@ body {
   line-height: 1.5;
 }
 
-
-/* --------------------------------
-   MOBILE
--------------------------------- */
-
-@media (max-width: 700px) {
-
-  .section {
-    padding: 24px;
-  }
-
-  .about-top {
-    font-size: 10px;
-  }
-  .interaction-instruction {
-  display: none;
-}
-
-  .about-status {
-    display: none;
-  }
-
-  .identity {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-
-  .magic-field {
-    min-height: 400px;
-  }
-
-  .portrait-wrap {
-    width: 90%;
-    height: 400px;
-
-    right: 5%;
-  }
-
-  .magic-field::before {
-    width: 320px;
-    height: 320px;
-
-    right: 50%;
-    transform: translateX(50%);
-  }
-
-  .magic-word {
-    font-size: 10px;
-  }
-
-  .field-word {
-    font-size: 8px;
-  }
-
-  .about-bottom {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .hero-intro {
-    font-size: 14px;
-  }
-
-  .main-navigation a {
-    grid-template-columns: 40px 1fr auto;
-  }
-
-  .contact-links {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  body {
-    cursor: auto;
-  }
-
-  #cursor-trail,
-  .sparkle {
-    display: none;
-  }
-/* EDUCATION MOBILE */
-
-.education-status {
-  display: none;
-}
-
-.timeline-wrapper {
-  margin-top: 70px;
-
-  padding: 0;
-}
-
-.timeline-line {
-  left: 8%;
-  right: 8%;
-}
-
-.timeline-year {
-  font-size: 10px;
-}
-
-.timeline-short {
-  font-size: 9px;
-}
-
-.education-details {
-  margin-top: 70px;
-
-  min-height: 500px;
-}
-
-.education-detail h2 {
-  font-size: 42px;
-}
-
-.detail-list {
-  grid-template-columns: 1fr 1fr;
-
-  gap: 30px 20px;
-
-  margin-top: 45px;
-}
-  /* PROJECTS MOBILE */
-
-  .projects-heatmap {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 5px;
-  }
-
-  .project-cell {
-    width: 100%;
-    min-width: 0;
-    min-height: 150px;
-    padding: 22px;
-    box-sizing: border-box;
-  }
-
-  .project-cell:nth-child(1),
-  .project-cell:nth-child(2),
-  .project-cell:nth-child(3),
-  .project-cell:nth-child(4),
-  .project-cell:nth-child(5),
-  .project-cell:nth-child(6),
-  .project-cell:nth-child(7),
-  .project-cell:nth-child(8) {
-    grid-column: auto;
-  }
-
-  .project-cell:hover {
-    min-height: 150px;
-    transform: none;
-    box-shadow: none;
-  }
-
-  .project-cell h3 {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-
-    font-size: 22px;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-  }
-
-  .project-cell-top {
-    width: 100%;
-    margin-bottom: 22px;
-  }
-
-  .project-expand {
-    width: 100%;
-    max-width: none;
-
-    max-height: 0;
-    margin-top: 0;
-
-    opacity: 0;
-    overflow: hidden;
-    transform: none;
-
-    transition:
-      max-height 0.45s ease,
-      opacity 0.3s ease,
-      margin-top 0.3s ease;
-  }
-
-  .project-cell.active {
-    min-height: 150px;
-  }
-
-  .project-cell.active .project-expand {
-    max-height: 1000px;
-    margin-top: 25px;
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .project-description {
-    width: 100%;
-    max-width: none;
-
-    font-size: 14px;
-    line-height: 1.6;
-
-    margin-bottom: 25px;
-  }
-
-  .project-details {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
-
-  .project-details strong {
-    max-width: none;
-
-    font-size: 12px;
-    line-height: 1.5;
-  }
-
-  .project-link {
-    margin-top: 25px;
-    font-size: 10px;
-  }
-.resume-section {
-  padding-top: 70px;
-}
-
-.resume-intro {
-  margin-bottom: 30px;
-}
-
-.resume-viewer-wrapper {
-  height: 520px;
-}
-
-.resume-download {
-  font-size: 10px;
-}
-}
 /* =========================
    PROJECTS
 ========================= */
@@ -1269,4 +1020,253 @@ body {
   opacity: 0.55;
 
   letter-spacing: 0.16em;
+}
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
+
+@media (max-width: 700px) {
+
+  .section {
+    padding: 24px;
+  }
+
+  .about-top {
+    font-size: 10px;
+  }
+  .interaction-instruction {
+  display: none;
+}
+
+  .about-status {
+    display: none;
+  }
+
+  .identity {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .magic-field {
+    min-height: 400px;
+  }
+
+  .portrait-wrap {
+    width: 90%;
+    height: 400px;
+
+    right: 5%;
+  }
+
+  .magic-field::before {
+    width: 320px;
+    height: 320px;
+
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .magic-word {
+    font-size: 10px;
+  }
+
+  .field-word {
+    font-size: 8px;
+  }
+
+  .about-bottom {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-intro {
+    font-size: 14px;
+  }
+
+  .main-navigation a {
+    grid-template-columns: 40px 1fr auto;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  body {
+    cursor: auto;
+  }
+
+  #cursor-trail,
+  .sparkle {
+    display: none;
+  }
+/* EDUCATION MOBILE */
+
+.education-status {
+  display: none;
+}
+
+.timeline-wrapper {
+  margin-top: 70px;
+
+  padding: 0;
+}
+
+.timeline-line {
+  left: 8%;
+  right: 8%;
+}
+
+.timeline-year {
+  font-size: 10px;
+}
+
+.timeline-short {
+  font-size: 9px;
+}
+
+.education-details {
+  margin-top: 70px;
+
+  min-height: 500px;
+}
+
+.education-detail h2 {
+  font-size: 42px;
+}
+
+.detail-list {
+  grid-template-columns: 1fr 1fr;
+
+  gap: 30px 20px;
+
+  margin-top: 45px;
+}
+  /* PROJECTS MOBILE */
+
+  .projects-heatmap {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .project-cell {
+    width: 100%;
+    min-width: 0;
+    min-height: 150px;
+    padding: 22px;
+    box-sizing: border-box;
+  }
+
+  .project-cell:nth-child(1),
+  .project-cell:nth-child(2),
+  .project-cell:nth-child(3),
+  .project-cell:nth-child(4),
+  .project-cell:nth-child(5),
+  .project-cell:nth-child(6),
+  .project-cell:nth-child(7),
+  .project-cell:nth-child(8) {
+    grid-column: auto;
+  }
+
+  .project-cell:hover {
+    min-height: 150px;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .project-cell h3 {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+
+    font-size: 22px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  .project-cell-top {
+    width: 100%;
+    margin-bottom: 22px;
+  }
+
+  .project-expand {
+    width: 100%;
+    max-width: none;
+
+    max-height: 0;
+    margin-top: 0;
+
+    opacity: 0;
+    overflow: hidden;
+    transform: none;
+
+    transition:
+      max-height 0.45s ease,
+      opacity 0.3s ease,
+      margin-top 0.3s ease;
+  }
+
+  .project-cell.active {
+    min-height: 150px;
+  }
+
+  .project-cell.active .project-expand {
+    max-height: 1000px;
+    margin-top: 25px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .project-description {
+    width: 100%;
+    max-width: none;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+  }
+
+  .project-details {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .project-details strong {
+    max-width: none;
+
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .project-link {
+    margin-top: 25px;
+    font-size: 10px;
+  }
+.resume-section {
+  padding-top: 70px;
+}
+
+.resume-intro {
+  margin-bottom: 30px;
+}
+
+.resume-viewer-wrapper {
+  height: 520px;
+}
+
+.resume-download {
+  font-size: 10px;
+}
 }
