@@ -1270,3 +1270,44 @@ body {
   font-size: 10px;
 }
 }
+/* =========================
+   MOBILE RESUME VIEWER
+========================= */
+
+.mobile-resume {
+  display: none;
+}
+
+@media (max-width: 700px) {
+
+  .desktop-resume {
+    display: none;
+  }
+
+  .mobile-resume {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    width: 100%;
+    height: 800px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #eeeeee;
+    padding: 10px;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobile-resume canvas {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    background: white;
+    flex-shrink: 0;
+  }
+}
