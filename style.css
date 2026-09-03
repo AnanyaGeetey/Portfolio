@@ -1272,6 +1272,214 @@ body {
 }
 /* MOBILE RESUME */
 
+
+
+/* =========================
+   INTERNSHIPS
+========================= */
+
+.internships-section {
+  min-height: auto;
+  padding-top: 40px;
+}
+
+.internships-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.internships-status {
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+
+/* TIMELINE */
+
+.internship-timeline-wrapper {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 100px;
+
+  padding: 0 5%;
+}
+
+.internship-timeline-line {
+  position: absolute;
+
+  top: 44px;
+  left: 10%;
+  right: 10%;
+
+  height: 1px;
+
+  background: var(--line);
+}
+
+
+/* NODES */
+
+.internship-node {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: none;
+  background: transparent;
+
+  color: inherit;
+  cursor: pointer;
+
+  font-family: "DM Mono", monospace;
+}
+
+.internship-year {
+  margin-bottom: 18px;
+
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.internship-dot {
+  width: 13px;
+  height: 13px;
+
+  border: 1px solid var(--line);
+  border-radius: 50%;
+
+  background: var(--background);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.internship-short {
+  margin-top: 16px;
+
+  font-size: 10px;
+  letter-spacing: 0.06em;
+
+  color: #777;
+
+  transition: color 0.3s ease;
+}
+
+
+/* ACTIVE / HOVER */
+
+.internship-node:hover .internship-dot,
+.internship-node.active .internship-dot {
+  background: #75d85b;
+
+  transform: scale(1.4);
+
+  box-shadow:
+    0 0 8px #75d85b,
+    0 0 20px rgba(117, 216, 91, 0.6);
+}
+
+.internship-node:hover .internship-short,
+.internship-node.active .internship-short {
+  color: #4fa83f;
+}
+
+
+/* DETAILS */
+
+.internship-details {
+  position: relative;
+  margin-top: 90px;
+  min-height: 0;
+}
+
+.internship-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.internship-detail.active {
+  position: relative;
+
+  opacity: 1;
+  transform: translateY(0);
+
+  pointer-events: auto;
+}
+
+.internship-detail-type {
+  margin: 0 0 18px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+
+  color: #777;
+}
+
+.internship-detail h2 {
+  margin: 0;
+
+  max-width: 700px;
+
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+
+  font-weight: 500;
+}
+
+
+/* DETAIL GRID */
+
+.internship-detail-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+
+  margin-top: 55px;
+}
+
+.internship-detail-list span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+
+  color: #777;
+}
+
+.internship-detail-list p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 @media (max-width: 700px) {
 
   .resume-viewer-wrapper {
@@ -1282,5 +1490,79 @@ body {
     justify-content: flex-start;
     margin-top: 30px;
   }
+/* INTERNSHIPS MOBILE */
 
+  .internships-section {
+      padding-top: 70px;
+  }
+
+  .internships-status {
+    display: none;
+  }
+
+  .internship-timeline-wrapper {
+    margin-top: 70px;
+    padding: 0;
+  }
+
+  .internship-timeline-line {
+    left: 5%;
+    right: 5%;
+  }
+
+  .internship-year {
+    font-size: 10px;
+  }
+
+  .internship-short {
+    font-size: 8px;
+    letter-spacing: 0.03em;
+  }
+
+  .internship-details {
+  margin-top: 70px;
+  min-height: 0;
+}
+
+.internship-detail h2 {
+  font-size: 40px;
+}
+
+.internship-detail-list {
+  grid-template-columns: 1fr 1fr;
+
+  gap: 30px 20px;
+
+  margin-top: 45px;
+}
+
+.internship-detail-list p {
+  font-size: 13px;
+}
+
+}
+/* FINAL INTERNSHIP SPACING FIX */
+
+.internships-section {
+  min-height: auto !important;
+  height: auto !important;
+  padding-bottom: 0 !important;
+}
+
+.internship-details {
+  height: auto !important;
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.internship-detail.active {
+  position: relative;
+}
+
+@media (min-width: 701px) {
+  .internships-section {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 40px !important;
+  }
 }

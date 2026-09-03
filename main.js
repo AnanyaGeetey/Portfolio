@@ -298,3 +298,73 @@ projectCells.forEach((project) => {
     }
   });
 });
+/* =========================
+   INTERNSHIP TIMELINE
+========================= */
+
+const internshipNodes =
+  document.querySelectorAll(".internship-node");
+
+const internshipDetails =
+  document.querySelectorAll(".internship-detail");
+
+internshipNodes.forEach((node) => {
+
+  node.addEventListener("mouseenter", () => {
+
+    if (window.innerWidth > 700) {
+
+      const target = node.dataset.internship;
+
+      internshipNodes.forEach((item) => {
+        item.classList.remove("active");
+      });
+
+      internshipDetails.forEach((detail) => {
+        detail.classList.remove("active");
+      });
+
+      node.classList.add("active");
+
+      const targetDetail =
+        document.querySelector(
+          `.internship-detail[data-detail="${target}"]`
+        );
+
+      if (targetDetail) {
+        targetDetail.classList.add("active");
+      }
+    }
+
+  });
+
+
+  node.addEventListener("click", () => {
+
+    if (window.innerWidth <= 700) {
+
+      const target = node.dataset.internship;
+
+      internshipNodes.forEach((item) => {
+        item.classList.remove("active");
+      });
+
+      internshipDetails.forEach((detail) => {
+        detail.classList.remove("active");
+      });
+
+      node.classList.add("active");
+
+      const targetDetail =
+        document.querySelector(
+          `.internship-detail[data-detail="${target}"]`
+        );
+
+      if (targetDetail) {
+        targetDetail.classList.add("active");
+      }
+    }
+
+  });
+
+});
